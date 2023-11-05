@@ -1,0 +1,15 @@
+---
+myrule:
+  action: "accept"
+  comments: "Allow PROD to DEV ICMP ping"
+  srcintfs: 
+    - "PROD"
+  dstintfs: 
+    - "DEV"
+  srcaddrs: 
+    - "PROD address"
+  dstaddrs: 
+    - "DEV address"
+  services: 
+    - "ALL_ICMP"
+  logtraffic: "all"

@@ -1,0 +1,8 @@
+---
+PROD address:
+  comment: "Prod hosts group"
+  members:
+    - "testhost1"
+    - "testhost2"
+    - "testhost3"
+    - "testhost4"

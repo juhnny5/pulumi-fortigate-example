@@ -1,0 +1,6 @@
+name: pulumi-fortigate-example
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An example Pulumi program deploying FortiGate firewall policies and objects
