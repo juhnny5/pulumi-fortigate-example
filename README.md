@@ -5,6 +5,7 @@ This repo shows how to simplify the configuration of your FortiGate firewall and
 
 ## Table of content
 
+
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
@@ -21,8 +22,12 @@ This repo shows how to simplify the configuration of your FortiGate firewall and
     - [Add new address or subnet](#add-new-address-or-subnet)
     - [Add new address group](#add-new-address-group)
     - [Add new firewall policy](#add-new-firewall-policy)
+    - [Add new service](#add-new-service)
+    - [Add new service groups](#add-new-service-groups)
 
 <!-- /code_chunk_output -->
+
+
 
 ## Getting started
 
@@ -127,4 +132,29 @@ myrule:
   services: 
     - "ALL_ICMP"
   logtraffic: "all"
+```
+
+### Add new service
+
+```yaml
+# TCP port range
+myport:
+  type: "TCP" # or UDP/SCTP
+  port_range: "223-332"
+  visibility: "enable"
+  category: "General"
+
+ssh_port:
+  type: "TCP"
+  port_range: "22-22"
+  visibility: "enable"
+  category: "General"
+```
+
+### Add new service groups
+
+```yaml
+mygroup:
+  members: 
+    - "myport"
 ```

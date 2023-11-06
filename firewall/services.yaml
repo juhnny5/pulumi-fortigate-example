@@ -1,0 +1,6 @@
+---
+test-pulumi:
+  type: "TCP" # or UDP/SCTP
+  port_range: "223-332"
+  visibility: "enable"
+  category: "General"
